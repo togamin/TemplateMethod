@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.demo.templatemethod.CookGrilledFood;
 import com.example.demo.templatemethod.concrete.CookGrilledChiken;
 import com.example.demo.templatemethod.concrete.CookGrilledPork;
 
@@ -13,12 +14,11 @@ public class TemplateMethodApplication {
 		SpringApplication.run(TemplateMethodApplication.class, args);
 		
 		//グリルチキンの作成
-		var grilledChiken = new CookGrilledChiken();
+		CookGrilledFood grilledChiken = new CookGrilledChiken();
 		grilledChiken.cookGrilledFood();
 		
 		//グリルポークの作成
-		var grilledpork = new CookGrilledPork();
+		CookGrilledFood grilledpork = new CookGrilledPork();
 		grilledpork.cookGrilledFood();
 	}
-
 }
